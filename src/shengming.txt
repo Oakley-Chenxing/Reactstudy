@@ -1,0 +1,40 @@
+生命周期函数值在某一时刻组件会自动调用的函数
+
+如：render & constructor
+初始化过程--constructor
+
+Mounting--挂在（组件第一次被执行）compoment--render--compoment
+ //在组件即将被挂在到页面的时刻执行
+componentWillUnmount(){
+    console.log('componentWillMount');
+}
+compomentDidmount
+组件在被挂在之后自动执行
+
+updating--props
+
+        --states
+
+共有的： shouldComponentUpdate//组件被更新之前，被自动执行
+         要求返回布尔结果 return true/false
+
+         componentWillUpdate//组件被更新之前,shouldComponentUpdate,被自动执行
+         true才执行
+
+         render
+
+         ComponentDitUpdate
+
+props 私有的 compomentWillRecieveProps
+//一个组件从父组件接受props参数才执行   
+//如果这个组件第一次存在于父组件，不被执行
+//如果这个组件之前已经存在于父组件中，才执行
+
+Unmounting 去除挂载
+componentWillUnmountco--当这个组件即将被从页面剔除的时候，才会被执行
+
+所有组件运行时都会执行这些生命函数
+
+
+
+使用Charles进行接口数据模拟
